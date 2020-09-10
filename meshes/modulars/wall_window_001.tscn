@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://meshes/imported/wall_window_001.mesh" type="ArrayMesh" id=1]
+[ext_resource path="res://materials/material_001.tres" type="Material" id=2]
+
+[sub_resource type="ConcavePolygonShape" id=1]
+data = PoolVector3Array( 0.0049, 5.0082, -0.2043, 0.0049, 0.0082, -0.2043, 3.0049, 0.0082, -0.2043, 3.0049, 5.0082, -0.0043, 3.0049, 0.0082, -0.0043, 0.0049, 0.0082, -0.0043, 0.0049, 5.0082, -0.2043, 3.0049, 5.0082, -0.2043, 3.0049, 5.0082, -0.0043, 0.0049, 5.0082, -0.0043, 0.0049, 0.0082, -0.0043, 0.0049, 0.0082, -0.2043, 3.0049, 5.0082, -0.2043, 3.0049, 0.0082, -0.2043, 3.0049, 0.0082, -0.0043, 3.0049, 0.0082, -0.2043, 0.0049, 0.0082, -0.2043, 0.0049, 0.0082, -0.0043, 0.0049, 5.0082, -0.2043, 3.0049, 0.0082, -0.2043, 3.0049, 5.0082, -0.2043, 3.0049, 5.0082, -0.0043, 0.0049, 0.0082, -0.0043, 0.0049, 5.0082, -0.0043, 0.0049, 5.0082, -0.2043, 3.0049, 5.0082, -0.0043, 0.0049, 5.0082, -0.0043, 0.0049, 5.0082, -0.0043, 0.0049, 0.0082, -0.2043, 0.0049, 5.0082, -0.2043, 3.0049, 5.0082, -0.2043, 3.0049, 0.0082, -0.0043, 3.0049, 5.0082, -0.0043, 3.0049, 0.0082, -0.2043, 0.0049, 0.0082, -0.0043, 3.0049, 0.0082, -0.0043 )
+
+[node name="wall_window_001" type="Spatial"]
+
+[node name="wall_window_001" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 2 )
+
+[node name="wall_window_001" type="StaticBody" parent="wall_window_001"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0169867, 0.0096702, -0.000102086 )
+
+[node name="shape0" type="CollisionShape" parent="wall_window_001/wall_window_001"]
+shape = SubResource( 1 )

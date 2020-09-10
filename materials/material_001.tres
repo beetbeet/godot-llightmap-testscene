@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=2]
+
+[ext_resource path="res://materials/llightmap_shader.shader" type="Shader" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/emission = null
+shader_param/emission_color = null
+shader_param/texture_albedo = ExtResource( 2 )

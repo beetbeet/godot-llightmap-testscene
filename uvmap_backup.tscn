@@ -1,0 +1,782 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://meshes/modulars/wall_001.tscn" type="PackedScene" id=1]
+[ext_resource path="res://meshes/modulars/wall_window_001.tscn" type="PackedScene" id=2]
+[ext_resource path="res://meshes/modulars/floor_001.tscn" type="PackedScene" id=3]
+[ext_resource path="res://meshes/modulars/column_001.tscn" type="PackedScene" id=4]
+[ext_resource path="res://meshes/imported/floor_001.mesh" type="ArrayMesh" id=5]
+[ext_resource path="res://materials/material_001.tres" type="Material" id=6]
+[ext_resource path="res://meshes/imported/column_001.mesh" type="ArrayMesh" id=7]
+[ext_resource path="res://meshes/imported/wall_001.mesh" type="ArrayMesh" id=8]
+[ext_resource path="res://meshes/imported/wall_window_001.mesh" type="ArrayMesh" id=9]
+
+[sub_resource type="ConcavePolygonShape" id=2]
+data = PoolVector3Array( 2, 0, 2, 0, 0, 2, 0, 0, 0, 2, 0, 2, 0, 0, 0, 2, 0, 0 )
+
+[sub_resource type="ConcavePolygonShape" id=3]
+data = PoolVector3Array( 0.0049, 5.0082, -0.2043, 0.0049, 0.0082, -0.2043, 3.0049, 0.0082, -0.2043, 3.0049, 5.0082, -0.0043, 3.0049, 0.0082, -0.0043, 0.0049, 0.0082, -0.0043, 0.0049, 5.0082, -0.2043, 3.0049, 5.0082, -0.2043, 3.0049, 5.0082, -0.0043, 0.0049, 5.0082, -0.0043, 0.0049, 0.0082, -0.0043, 0.0049, 0.0082, -0.2043, 3.0049, 5.0082, -0.2043, 3.0049, 0.0082, -0.2043, 3.0049, 0.0082, -0.0043, 3.0049, 0.0082, -0.2043, 0.0049, 0.0082, -0.2043, 0.0049, 0.0082, -0.0043, 0.0049, 5.0082, -0.2043, 3.0049, 0.0082, -0.2043, 3.0049, 5.0082, -0.2043, 3.0049, 5.0082, -0.0043, 0.0049, 0.0082, -0.0043, 0.0049, 5.0082, -0.0043, 0.0049, 5.0082, -0.2043, 3.0049, 5.0082, -0.0043, 0.0049, 5.0082, -0.0043, 0.0049, 5.0082, -0.0043, 0.0049, 0.0082, -0.2043, 0.0049, 5.0082, -0.2043, 3.0049, 5.0082, -0.2043, 3.0049, 0.0082, -0.0043, 3.0049, 5.0082, -0.0043, 3.0049, 0.0082, -0.2043, 0.0049, 0.0082, -0.0043, 3.0049, 0.0082, -0.0043 )
+
+[sub_resource type="ConcavePolygonShape" id=1]
+data = PoolVector3Array( 0.0049, 5.0082, -0.2043, 0.0049, 0.0082, -0.2043, 3.0049, 0.0082, -0.2043, 3.0049, 5.0082, -0.0043, 3.0049, 0.0082, -0.0043, 0.0049, 0.0082, -0.0043, 0.0049, 5.0082, -0.2043, 3.0049, 5.0082, -0.2043, 3.0049, 5.0082, -0.0043, 0.0049, 5.0082, -0.0043, 0.0049, 0.0082, -0.0043, 0.0049, 0.0082, -0.2043, 3.0049, 5.0082, -0.2043, 3.0049, 0.0082, -0.2043, 3.0049, 0.0082, -0.0043, 3.0049, 0.0082, -0.2043, 0.0049, 0.0082, -0.2043, 0.0049, 0.0082, -0.0043, 0.0049, 5.0082, -0.2043, 3.0049, 0.0082, -0.2043, 3.0049, 5.0082, -0.2043, 3.0049, 5.0082, -0.0043, 0.0049, 0.0082, -0.0043, 0.0049, 5.0082, -0.0043, 0.0049, 5.0082, -0.2043, 3.0049, 5.0082, -0.0043, 0.0049, 5.0082, -0.0043, 0.0049, 5.0082, -0.0043, 0.0049, 0.0082, -0.2043, 0.0049, 5.0082, -0.2043, 3.0049, 5.0082, -0.2043, 3.0049, 0.0082, -0.0043, 3.0049, 5.0082, -0.0043, 3.0049, 0.0082, -0.2043, 0.0049, 0.0082, -0.0043, 3.0049, 0.0082, -0.0043 )
+
+[sub_resource type="ConcavePolygonShape" id=4]
+data = PoolVector3Array( 0, 4.9951, -0.432, 0, 0, -0.432, 0.3055, 0, -0.3055, 0.3055, 4.9951, -0.3055, 0.3055, 0, -0.3055, 0.432, 0, 0, 0.432, 4.9951, 0, 0.432, 0, 0, 0.3055, 0, 0.3055, 0.3055, 4.9951, 0.3055, 0.3055, 0, 0.3055, 0, 0, 0.432, 0, 4.9951, 0.432, 0, 0, 0.432, -0.3055, 0, 0.3055, -0.3055, 4.9951, 0.3055, -0.3055, 0, 0.3055, -0.432, 0, 0, -0.432, 4.9951, 0, 0.432, 4.9951, 0, 0, 4.9951, 0.432, -0.432, 4.9951, 0, -0.432, 0, 0, -0.3055, 0, -0.3055, -0.3055, 4.9951, -0.3055, -0.3055, 0, -0.3055, 0, 0, -0.432, 0.3055, 0, 0.3055, -0.3055, 0, -0.3055, -0.3055, 0, 0.3055, 0, 4.9951, -0.432, 0.3055, 0, -0.3055, 0.3055, 4.9951, -0.3055, 0.3055, 4.9951, -0.3055, 0.432, 0, 0, 0.432, 4.9951, 0, 0.432, 4.9951, 0, 0.3055, 0, 0.3055, 0.3055, 4.9951, 0.3055, 0.3055, 4.9951, 0.3055, 0, 0, 0.432, 0, 4.9951, 0.432, 0, 4.9951, 0.432, -0.3055, 0, 0.3055, -0.3055, 4.9951, 0.3055, -0.3055, 4.9951, 0.3055, -0.432, 0, 0, -0.432, 4.9951, 0, 0.432, 4.9951, 0, 0, 4.9951, -0.432, 0.3055, 4.9951, -0.3055, 0, 4.9951, -0.432, -0.432, 4.9951, 0, -0.3055, 4.9951, -0.3055, -0.432, 4.9951, 0, 0, 4.9951, 0.432, -0.3055, 4.9951, 0.3055, 0, 4.9951, 0.432, 0.432, 4.9951, 0, 0.3055, 4.9951, 0.3055, 0.432, 4.9951, 0, -0.432, 4.9951, 0, 0, 4.9951, -0.432, -0.432, 4.9951, 0, -0.3055, 0, -0.3055, -0.3055, 4.9951, -0.3055, -0.3055, 4.9951, -0.3055, 0, 0, -0.432, 0, 4.9951, -0.432, -0.3055, 0, -0.3055, 0.3055, 0, -0.3055, 0, 0, -0.432, 0.3055, 0, -0.3055, 0.3055, 0, 0.3055, 0.432, 0, 0, 0.3055, 0, 0.3055, -0.3055, 0, 0.3055, 0, 0, 0.432, -0.3055, 0, 0.3055, -0.3055, 0, -0.3055, -0.432, 0, 0, -0.3055, 0, -0.3055, 0.3055, 0, 0.3055, 0.3055, 0, -0.3055 )
+
+[node name="meshes" type="Spatial"]
+
+[node name="floor_001" parent="." instance=ExtResource( 3 )]
+
+[node name="floor_001" type="MeshInstance" parent="floor_001"]
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = ExtResource( 6 )
+
+[node name="floor_001" type="StaticBody" parent="floor_001/floor_001"]
+
+[node name="shape0" type="CollisionShape" parent="floor_001/floor_001/floor_001"]
+shape = SubResource( 2 )
+
+[node name="floor_002" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0 )
+
+[node name="floor_001" type="MeshInstance" parent="floor_002"]
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = ExtResource( 6 )
+
+[node name="floor_001" type="StaticBody" parent="floor_002/floor_001"]
+
+[node name="shape0" type="CollisionShape" parent="floor_002/floor_001/floor_001"]
+shape = SubResource( 2 )
+
+[node name="floor_003" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0 )
+
+[node name="floor_001" type="MeshInstance" parent="floor_003"]
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = ExtResource( 6 )
+
+[node name="floor_001" type="StaticBody" parent="floor_003/floor_001"]
+
+[node name="shape0" type="CollisionShape" parent="floor_003/floor_001/floor_001"]
+shape = SubResource( 2 )
+
+[node name="floor_004" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 0 )
+
+[node name="floor_001" type="MeshInstance" parent="floor_004"]
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = ExtResource( 6 )
+
+[node name="floor_001" type="StaticBody" parent="floor_004/floor_001"]
+
+[node name="shape0" type="CollisionShape" parent="floor_004/floor_001/floor_001"]
+shape = SubResource( 2 )
+
+[node name="floor_005" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0 )
+
+[node name="floor_001" type="MeshInstance" parent="floor_005"]
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = ExtResource( 6 )
+
+[node name="floor_001" type="StaticBody" parent="floor_005/floor_001"]
+
+[node name="shape0" type="CollisionShape" parent="floor_005/floor_001/floor_001"]
+shape = SubResource( 2 )
+
+[node name="floor_006" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 0 )
+
+[node name="floor_001" type="MeshInstance" parent="floor_006"]
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = ExtResource( 6 )
+
+[node name="floor_001" type="StaticBody" parent="floor_006/floor_001"]
+
+[node name="shape0" type="CollisionShape" parent="floor_006/floor_001/floor_001"]
+shape = SubResource( 2 )
+
+[node name="floor_007" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 0 )
+
+[node name="floor_001" type="MeshInstance" parent="floor_007"]
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = ExtResource( 6 )
+
+[node name="floor_001" type="StaticBody" parent="floor_007/floor_001"]
+
+[node name="shape0" type="CollisionShape" parent="floor_007/floor_001/floor_001"]
+shape = SubResource( 2 )
+
+[node name="floor_008" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3 )
+
+[node name="floor_001" type="MeshInstance" parent="floor_008"]
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = ExtResource( 6 )
+
+[node name="floor_001" type="StaticBody" parent="floor_008/floor_001"]
+
+[node name="shape0" type="CollisionShape" parent="floor_008/floor_001/floor_001"]
+shape = SubResource( 2 )
+
+[node name="floor_009" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 3 )
+
+[node name="floor_001" type="MeshInstance" parent="floor_009"]
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = ExtResource( 6 )
+
+[node name="floor_001" type="StaticBody" parent="floor_009/floor_001"]
+
+[node name="shape0" type="CollisionShape" parent="floor_009/floor_001/floor_001"]
+shape = SubResource( 2 )
+
+[node name="floor_010" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 3 )
+
+[node name="floor_001" type="MeshInstance" parent="floor_010"]
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = ExtResource( 6 )
+
+[node name="floor_001" type="StaticBody" parent="floor_010/floor_001"]
+
+[node name="shape0" type="CollisionShape" parent="floor_010/floor_001/floor_001"]
+shape = SubResource( 2 )
+
+[node name="floor_011" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 3 )
+
+[node name="floor_001" type="MeshInstance" parent="floor_011"]
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = ExtResource( 6 )
+
+[node name="floor_001" type="StaticBody" parent="floor_011/floor_001"]
+
+[node name="shape0" type="CollisionShape" parent="floor_011/floor_001/floor_001"]
+shape = SubResource( 2 )
+
+[node name="floor_012" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 3 )
+
+[node name="floor_001" type="MeshInstance" parent="floor_012"]
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = ExtResource( 6 )
+
+[node name="floor_001" type="StaticBody" parent="floor_012/floor_001"]
+
+[node name="shape0" type="CollisionShape" parent="floor_012/floor_001/floor_001"]
+shape = SubResource( 2 )
+
+[node name="floor_013" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 3 )
+
+[node name="floor_001" type="MeshInstance" parent="floor_013"]
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = ExtResource( 6 )
+
+[node name="floor_001" type="StaticBody" parent="floor_013/floor_001"]
+
+[node name="shape0" type="CollisionShape" parent="floor_013/floor_001/floor_001"]
+shape = SubResource( 2 )
+
+[node name="floor_014" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 3 )
+
+[node name="floor_001" type="MeshInstance" parent="floor_014"]
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = ExtResource( 6 )
+
+[node name="floor_001" type="StaticBody" parent="floor_014/floor_001"]
+
+[node name="shape0" type="CollisionShape" parent="floor_014/floor_001/floor_001"]
+shape = SubResource( 2 )
+
+[node name="floor_015" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6 )
+
+[node name="floor_001" type="MeshInstance" parent="floor_015"]
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = ExtResource( 6 )
+
+[node name="floor_001" type="StaticBody" parent="floor_015/floor_001"]
+
+[node name="shape0" type="CollisionShape" parent="floor_015/floor_001/floor_001"]
+shape = SubResource( 2 )
+
+[node name="floor_016" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 6 )
+
+[node name="floor_001" type="MeshInstance" parent="floor_016"]
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = ExtResource( 6 )
+
+[node name="floor_001" type="StaticBody" parent="floor_016/floor_001"]
+
+[node name="shape0" type="CollisionShape" parent="floor_016/floor_001/floor_001"]
+shape = SubResource( 2 )
+
+[node name="floor_017" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 6 )
+
+[node name="floor_001" type="MeshInstance" parent="floor_017"]
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = ExtResource( 6 )
+
+[node name="floor_001" type="StaticBody" parent="floor_017/floor_001"]
+
+[node name="shape0" type="CollisionShape" parent="floor_017/floor_001/floor_001"]
+shape = SubResource( 2 )
+
+[node name="floor_018" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 6 )
+
+[node name="floor_001" type="MeshInstance" parent="floor_018"]
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = ExtResource( 6 )
+
+[node name="floor_001" type="StaticBody" parent="floor_018/floor_001"]
+
+[node name="shape0" type="CollisionShape" parent="floor_018/floor_001/floor_001"]
+shape = SubResource( 2 )
+
+[node name="floor_019" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 6 )
+
+[node name="floor_001" type="MeshInstance" parent="floor_019"]
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = ExtResource( 6 )
+
+[node name="floor_001" type="StaticBody" parent="floor_019/floor_001"]
+
+[node name="shape0" type="CollisionShape" parent="floor_019/floor_001/floor_001"]
+shape = SubResource( 2 )
+
+[node name="floor_020" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 6 )
+
+[node name="floor_001" type="MeshInstance" parent="floor_020"]
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = ExtResource( 6 )
+
+[node name="floor_001" type="StaticBody" parent="floor_020/floor_001"]
+
+[node name="shape0" type="CollisionShape" parent="floor_020/floor_001/floor_001"]
+shape = SubResource( 2 )
+
+[node name="floor_021" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 6 )
+
+[node name="floor_001" type="MeshInstance" parent="floor_021"]
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = ExtResource( 6 )
+
+[node name="floor_001" type="StaticBody" parent="floor_021/floor_001"]
+
+[node name="shape0" type="CollisionShape" parent="floor_021/floor_001/floor_001"]
+shape = SubResource( 2 )
+
+[node name="floor_022" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9 )
+
+[node name="floor_001" type="MeshInstance" parent="floor_022"]
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = ExtResource( 6 )
+
+[node name="floor_001" type="StaticBody" parent="floor_022/floor_001"]
+
+[node name="shape0" type="CollisionShape" parent="floor_022/floor_001/floor_001"]
+shape = SubResource( 2 )
+
+[node name="floor_023" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 9 )
+
+[node name="floor_001" type="MeshInstance" parent="floor_023"]
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = ExtResource( 6 )
+
+[node name="floor_001" type="StaticBody" parent="floor_023/floor_001"]
+
+[node name="shape0" type="CollisionShape" parent="floor_023/floor_001/floor_001"]
+shape = SubResource( 2 )
+
+[node name="floor_024" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 9 )
+
+[node name="floor_001" type="MeshInstance" parent="floor_024"]
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = ExtResource( 6 )
+
+[node name="floor_001" type="StaticBody" parent="floor_024/floor_001"]
+
+[node name="shape0" type="CollisionShape" parent="floor_024/floor_001/floor_001"]
+shape = SubResource( 2 )
+
+[node name="floor_025" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 9 )
+
+[node name="floor_001" type="MeshInstance" parent="floor_025"]
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = ExtResource( 6 )
+
+[node name="floor_001" type="StaticBody" parent="floor_025/floor_001"]
+
+[node name="shape0" type="CollisionShape" parent="floor_025/floor_001/floor_001"]
+shape = SubResource( 2 )
+
+[node name="floor_026" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 9 )
+
+[node name="floor_001" type="MeshInstance" parent="floor_026"]
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = ExtResource( 6 )
+
+[node name="floor_001" type="StaticBody" parent="floor_026/floor_001"]
+
+[node name="shape0" type="CollisionShape" parent="floor_026/floor_001/floor_001"]
+shape = SubResource( 2 )
+
+[node name="floor_027" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 9 )
+
+[node name="floor_001" type="MeshInstance" parent="floor_027"]
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = ExtResource( 6 )
+
+[node name="floor_001" type="StaticBody" parent="floor_027/floor_001"]
+
+[node name="shape0" type="CollisionShape" parent="floor_027/floor_001/floor_001"]
+shape = SubResource( 2 )
+
+[node name="floor_028" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 9 )
+
+[node name="floor_001" type="MeshInstance" parent="floor_028"]
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = ExtResource( 6 )
+
+[node name="floor_001" type="StaticBody" parent="floor_028/floor_001"]
+
+[node name="shape0" type="CollisionShape" parent="floor_028/floor_001/floor_001"]
+shape = SubResource( 2 )
+
+[node name="wall_001" parent="." instance=ExtResource( 1 )]
+
+[node name="wall_001" type="MeshInstance" parent="wall_001"]
+use_in_baked_light = true
+mesh = ExtResource( 8 )
+material/0 = ExtResource( 6 )
+
+[node name="wall_001" type="StaticBody" parent="wall_001/wall_001"]
+
+[node name="shape0" type="CollisionShape" parent="wall_001/wall_001/wall_001"]
+shape = SubResource( 3 )
+
+[node name="wall_013" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12 )
+
+[node name="wall_001" type="MeshInstance" parent="wall_013"]
+use_in_baked_light = true
+mesh = ExtResource( 8 )
+material/0 = ExtResource( 6 )
+
+[node name="wall_001" type="StaticBody" parent="wall_013/wall_001"]
+
+[node name="shape0" type="CollisionShape" parent="wall_013/wall_001/wall_001"]
+shape = SubResource( 3 )
+
+[node name="wall_014" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 12 )
+
+[node name="wall_001" type="MeshInstance" parent="wall_014"]
+use_in_baked_light = true
+mesh = ExtResource( 8 )
+material/0 = ExtResource( 6 )
+
+[node name="wall_001" type="StaticBody" parent="wall_014/wall_001"]
+
+[node name="shape0" type="CollisionShape" parent="wall_014/wall_001/wall_001"]
+shape = SubResource( 3 )
+
+[node name="wall_015" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 12 )
+
+[node name="wall_001" type="MeshInstance" parent="wall_015"]
+use_in_baked_light = true
+mesh = ExtResource( 8 )
+material/0 = ExtResource( 6 )
+
+[node name="wall_001" type="StaticBody" parent="wall_015/wall_001"]
+
+[node name="shape0" type="CollisionShape" parent="wall_015/wall_001/wall_001"]
+shape = SubResource( 3 )
+
+[node name="wall_016" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 12 )
+
+[node name="wall_001" type="MeshInstance" parent="wall_016"]
+use_in_baked_light = true
+mesh = ExtResource( 8 )
+material/0 = ExtResource( 6 )
+
+[node name="wall_001" type="StaticBody" parent="wall_016/wall_001"]
+
+[node name="shape0" type="CollisionShape" parent="wall_016/wall_001/wall_001"]
+shape = SubResource( 3 )
+
+[node name="wall_017" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 12 )
+
+[node name="wall_001" type="MeshInstance" parent="wall_017"]
+use_in_baked_light = true
+mesh = ExtResource( 8 )
+material/0 = ExtResource( 6 )
+
+[node name="wall_001" type="StaticBody" parent="wall_017/wall_001"]
+
+[node name="shape0" type="CollisionShape" parent="wall_017/wall_001/wall_001"]
+shape = SubResource( 3 )
+
+[node name="wall_018" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 12 )
+
+[node name="wall_001" type="MeshInstance" parent="wall_018"]
+use_in_baked_light = true
+mesh = ExtResource( 8 )
+material/0 = ExtResource( 6 )
+
+[node name="wall_001" type="StaticBody" parent="wall_018/wall_001"]
+
+[node name="shape0" type="CollisionShape" parent="wall_018/wall_001/wall_001"]
+shape = SubResource( 3 )
+
+[node name="wall_019" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 12 )
+
+[node name="wall_001" type="MeshInstance" parent="wall_019"]
+use_in_baked_light = true
+mesh = ExtResource( 8 )
+material/0 = ExtResource( 6 )
+
+[node name="wall_001" type="StaticBody" parent="wall_019/wall_001"]
+
+[node name="shape0" type="CollisionShape" parent="wall_019/wall_001/wall_001"]
+shape = SubResource( 3 )
+
+[node name="wall_005" parent="." instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 3 )
+
+[node name="wall_001" type="MeshInstance" parent="wall_005"]
+use_in_baked_light = true
+mesh = ExtResource( 8 )
+material/0 = ExtResource( 6 )
+
+[node name="wall_001" type="StaticBody" parent="wall_005/wall_001"]
+
+[node name="shape0" type="CollisionShape" parent="wall_005/wall_001/wall_001"]
+shape = SubResource( 3 )
+
+[node name="wall_006" parent="." instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 6 )
+
+[node name="wall_001" type="MeshInstance" parent="wall_006"]
+use_in_baked_light = true
+mesh = ExtResource( 8 )
+material/0 = ExtResource( 6 )
+
+[node name="wall_001" type="StaticBody" parent="wall_006/wall_001"]
+
+[node name="shape0" type="CollisionShape" parent="wall_006/wall_001/wall_001"]
+shape = SubResource( 3 )
+
+[node name="wall_007" parent="." instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 9 )
+
+[node name="wall_001" type="MeshInstance" parent="wall_007"]
+use_in_baked_light = true
+mesh = ExtResource( 8 )
+material/0 = ExtResource( 6 )
+
+[node name="wall_001" type="StaticBody" parent="wall_007/wall_001"]
+
+[node name="shape0" type="CollisionShape" parent="wall_007/wall_001/wall_001"]
+shape = SubResource( 3 )
+
+[node name="wall_008" parent="." instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 12 )
+
+[node name="wall_001" type="MeshInstance" parent="wall_008"]
+use_in_baked_light = true
+mesh = ExtResource( 8 )
+material/0 = ExtResource( 6 )
+
+[node name="wall_001" type="StaticBody" parent="wall_008/wall_001"]
+
+[node name="shape0" type="CollisionShape" parent="wall_008/wall_001/wall_001"]
+shape = SubResource( 3 )
+
+[node name="wall_009" parent="." instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 21, 0, 3 )
+
+[node name="wall_001" type="MeshInstance" parent="wall_009"]
+use_in_baked_light = true
+mesh = ExtResource( 8 )
+material/0 = ExtResource( 6 )
+
+[node name="wall_001" type="StaticBody" parent="wall_009/wall_001"]
+
+[node name="shape0" type="CollisionShape" parent="wall_009/wall_001/wall_001"]
+shape = SubResource( 3 )
+
+[node name="wall_010" parent="." instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 21, 0, 6 )
+
+[node name="wall_001" type="MeshInstance" parent="wall_010"]
+use_in_baked_light = true
+mesh = ExtResource( 8 )
+material/0 = ExtResource( 6 )
+
+[node name="wall_001" type="StaticBody" parent="wall_010/wall_001"]
+
+[node name="shape0" type="CollisionShape" parent="wall_010/wall_001/wall_001"]
+shape = SubResource( 3 )
+
+[node name="wall_011" parent="." instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 21, 0, 9 )
+
+[node name="wall_001" type="MeshInstance" parent="wall_011"]
+use_in_baked_light = true
+mesh = ExtResource( 8 )
+material/0 = ExtResource( 6 )
+
+[node name="wall_001" type="StaticBody" parent="wall_011/wall_001"]
+
+[node name="shape0" type="CollisionShape" parent="wall_011/wall_001/wall_001"]
+shape = SubResource( 3 )
+
+[node name="wall_012" parent="." instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 21, 0, 12 )
+
+[node name="wall_001" type="MeshInstance" parent="wall_012"]
+use_in_baked_light = true
+mesh = ExtResource( 8 )
+material/0 = ExtResource( 6 )
+
+[node name="wall_001" type="StaticBody" parent="wall_012/wall_001"]
+
+[node name="shape0" type="CollisionShape" parent="wall_012/wall_001/wall_001"]
+shape = SubResource( 3 )
+
+[node name="wall_004" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 0 )
+
+[node name="wall_001" type="MeshInstance" parent="wall_004"]
+use_in_baked_light = true
+mesh = ExtResource( 8 )
+material/0 = ExtResource( 6 )
+
+[node name="wall_001" type="StaticBody" parent="wall_004/wall_001"]
+
+[node name="shape0" type="CollisionShape" parent="wall_004/wall_001/wall_001"]
+shape = SubResource( 3 )
+
+[node name="wall_window_001" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0 )
+
+[node name="wall_window_001" type="MeshInstance" parent="wall_window_001"]
+use_in_baked_light = true
+mesh = ExtResource( 9 )
+material/0 = ExtResource( 6 )
+
+[node name="wall_window_001" type="StaticBody" parent="wall_window_001/wall_window_001"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0169867, 0.0096702, -0.000102086 )
+
+[node name="shape0" type="CollisionShape" parent="wall_window_001/wall_window_001/wall_window_001"]
+shape = SubResource( 1 )
+
+[node name="wall_002" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0 )
+
+[node name="wall_001" type="MeshInstance" parent="wall_002"]
+use_in_baked_light = true
+mesh = ExtResource( 8 )
+material/0 = ExtResource( 6 )
+
+[node name="wall_001" type="StaticBody" parent="wall_002/wall_001"]
+
+[node name="shape0" type="CollisionShape" parent="wall_002/wall_001/wall_001"]
+shape = SubResource( 3 )
+
+[node name="wall_window_002" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 0 )
+
+[node name="wall_window_001" type="MeshInstance" parent="wall_window_002"]
+use_in_baked_light = true
+mesh = ExtResource( 9 )
+material/0 = ExtResource( 6 )
+
+[node name="wall_window_001" type="StaticBody" parent="wall_window_002/wall_window_001"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0169867, 0.0096702, -0.000102086 )
+
+[node name="shape0" type="CollisionShape" parent="wall_window_002/wall_window_001/wall_window_001"]
+shape = SubResource( 1 )
+
+[node name="wall_003" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0 )
+
+[node name="wall_001" type="MeshInstance" parent="wall_003"]
+use_in_baked_light = true
+mesh = ExtResource( 8 )
+material/0 = ExtResource( 6 )
+
+[node name="wall_001" type="StaticBody" parent="wall_003/wall_001"]
+
+[node name="shape0" type="CollisionShape" parent="wall_003/wall_001/wall_001"]
+shape = SubResource( 3 )
+
+[node name="wall_window_003" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 0 )
+
+[node name="wall_window_001" type="MeshInstance" parent="wall_window_003"]
+use_in_baked_light = true
+mesh = ExtResource( 9 )
+material/0 = ExtResource( 6 )
+
+[node name="wall_window_001" type="StaticBody" parent="wall_window_003/wall_window_001"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0169867, 0.0096702, -0.000102086 )
+
+[node name="shape0" type="CollisionShape" parent="wall_window_003/wall_window_001/wall_window_001"]
+shape = SubResource( 1 )
+
+[node name="column_001" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 3 )
+
+[node name="column_001" type="MeshInstance" parent="column_001"]
+use_in_baked_light = true
+mesh = ExtResource( 7 )
+material/0 = ExtResource( 6 )
+
+[node name="column_001" type="StaticBody" parent="column_001/column_001"]
+
+[node name="shape0" type="CollisionShape" parent="column_001/column_001/column_001"]
+shape = SubResource( 4 )
+
+[node name="column_002" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 3 )
+
+[node name="column_001" type="MeshInstance" parent="column_002"]
+use_in_baked_light = true
+mesh = ExtResource( 7 )
+material/0 = ExtResource( 6 )
+
+[node name="column_001" type="StaticBody" parent="column_002/column_001"]
+
+[node name="shape0" type="CollisionShape" parent="column_002/column_001/column_001"]
+shape = SubResource( 4 )
+
+[node name="column_003" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 3 )
+
+[node name="column_001" type="MeshInstance" parent="column_003"]
+use_in_baked_light = true
+mesh = ExtResource( 7 )
+material/0 = ExtResource( 6 )
+
+[node name="column_001" type="StaticBody" parent="column_003/column_001"]
+
+[node name="shape0" type="CollisionShape" parent="column_003/column_001/column_001"]
+shape = SubResource( 4 )
+
+[node name="column_004" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 3 )
+
+[node name="column_001" type="MeshInstance" parent="column_004"]
+use_in_baked_light = true
+mesh = ExtResource( 7 )
+material/0 = ExtResource( 6 )
+
+[node name="column_001" type="StaticBody" parent="column_004/column_001"]
+
+[node name="shape0" type="CollisionShape" parent="column_004/column_001/column_001"]
+shape = SubResource( 4 )
+
+[node name="column_005" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 3 )
+
+[node name="column_001" type="MeshInstance" parent="column_005"]
+use_in_baked_light = true
+mesh = ExtResource( 7 )
+material/0 = ExtResource( 6 )
+
+[node name="column_001" type="StaticBody" parent="column_005/column_001"]
+
+[node name="shape0" type="CollisionShape" parent="column_005/column_001/column_001"]
+shape = SubResource( 4 )
+
+[node name="column_006" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 3 )
+
+[node name="column_001" type="MeshInstance" parent="column_006"]
+use_in_baked_light = true
+mesh = ExtResource( 7 )
+material/0 = ExtResource( 6 )
+
+[node name="column_001" type="StaticBody" parent="column_006/column_001"]
+
+[node name="shape0" type="CollisionShape" parent="column_006/column_001/column_001"]
+shape = SubResource( 4 )
